@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scale=no">
+    <title>使用说明 - Cyberwing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            color: #111;
+        }
+
+        /* 导航栏 */
+        .nav {
+            background: #fff;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-back:hover {
+            color: #111;
+        }
+
+        .nav-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* 主内容区 */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        /* 标题样式 */
+        .page-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .page-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* 章节 */
+        .section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid #eee;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* 步骤 */
+        .step {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-num {
+            width: 28px;
+            height: 28px;
+            background: #111;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* 图片占位符 */
+        .image-placeholder {
+            background: #f8f8f8;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-hint {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        /* 提示框 */
+        .tip {
+            background: #f0f7ff;
+            border: 1px solid #d0e3ff;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 13px;
+            color: #0066cc;
+            margin-top: 12px;
+        }
+
+        /* 链接样式 */
+        .link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        /* 底部导航 */
+        .bottom-nav {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .back-home:hover {
+            background: #333;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .section {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <a href="index.html" class="nav-back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            返回
+        </a>
+        <span class="nav-title">使用说明</span>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="container">
+        <h1 class="page-title">Cyberwing 使用指南</h1>
+        <p class="page-desc">快速上手，充分发挥私有云 AI 助理的强大功能</p>
+
+        <!-- 第一部分：如何绑定设备 -->
+        <section class="section">
+            <h2 class="section-title">一、如何绑定设备</h2>
+
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3 class="step-title">下载并安装 App</h3>
+                    <p class="step-desc">在手机或平板设备上下载安装 Cyberwing 应用。</p>
+                    <div class="image-placeholder">
+                        <!-- TODO: 替换为实际截图 -->
+                        <!-- <img src="images/step1-download.png" alt="下载页面"> -->
+                        <p>[图片位置]</p>
+                        <p class="image-hint">此处放置下载页面截图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3 class="step-title">注册/登录账号</h3>
+                    <p class="step-desc">打开应用后，使用手机号或邮箱注册新账号，或使用已有账号登录。</p>
+                    <div class="image-placeholder">
+                        <!-- TODO: 替换为实际截图 -->
+                        <!-- <img src="images/step2-login.png" alt="登录页面"> -->
+                        <p>[图片位置]</p>
+                        <p class="image-hint">此处放置登录页面截图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3 class="step-title">添加新设备</h3>
+                    <p class="step-desc">登录后在设备管理页面，点击「添加设备」按钮，按照提示完成设备绑定。</p>
+                    <div class="image-placeholder">
+                        <!-- TODO: 替换为实际截图 -->
+                        <!-- <img src="images/step3-add-device.png" alt="添加设备页面"> -->
+                        <p>[图片位置]</p>
+                        <p class="image-hint">此处放置添加设备页面截图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h3 class="step-title">确认绑定</h3>
+                    <p class="step-desc">在目标设备上确认绑定请求，绑定成功后即可开始使用。</p>
+                    <div class="image-placeholder">
+                        <!-- TODO: 替换为实际截图 -->
+                        <!-- <img src="images/step4-confirm.png" alt="确认绑定页面"> -->
+                        <p>[图片位置]</p>
+                        <p class="image-hint">此处放置确认绑定页面截图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip">
+                💡 提示：每个账号最多可绑定 5 台设备，如需更多设备请联系客服。
+            </div>
+        </section>
+
+        <!-- 第二部分：如何初始化空间管理 -->
+        <section class="section">
+            <h2 class="section-title">二、如何初始化空间管理</h2>
+
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3 class="step-title">进入空间管理</h3>
+                    <p class="step-desc">在应用首页或侧边栏中找到「空间管理」入口，点击进入。</p>
+                    <div class="image-placeholder">
+                        <!-- TODO: 替换为实际截图 -->
+                        <!-- <img src="images/space1-entry.png" alt="空间管理入口"> -->
+                        <p>[图片位置]</p>
+                        <p class="image-hint">此处放置空间管理入口截图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3 class="step-title">选择存储位置</h3>
+                    <p class="step-desc">初次使用时，选择本地存储位置或云端存储位置。可根据需求选择内部存储或外置 SD 卡。</p>
+                    <div class="image-placeholder">
+                        <!-- TODO: 替换为实际截图 -->
+                        <!-- <img src="images/space2-location.png" alt="选择存储位置"> -->
+                        <p>[图片位置]</p>
+                        <p class="image-hint">此处放置存储位置选择截图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3 class="step-title">创建文件夹结构</h3>
+                    <p class="step-desc">根据个人需求创建文件夹，对文件进行分类管理，如：工作文档、照片、视频、音乐等。</p>
+                    <div class="image-placeholder">
+                        <!-- TODO: 替换为实际截图 -->
+                        <!-- <img src="images/space3-folder.png" alt="创建文件夹"> -->
+                        <p>[图片位置]</p>
+                        <p class="image-hint">此处放置文件夹创建截图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h3 class="step-title">设置自动备份（可选）</h3>
+                    <p class="step-desc">开启自动备份功能，让 AI 自动备份重要文件和照片，释放本地存储空间。</p>
+                    <div class="image-placeholder">
+                        <!-- TODO: 替换为实际截图 -->
+                        <!-- <img src="images/space4-backup.png" alt="自动备份设置"> -->
+                        <p>[图片位置]</p>
+                        <p class="image-hint">此处放置自动备份设置截图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip">
+                💡 提示：AI 智能分类功能可自动识别文件类型并进行整理，建议开启以获得更好的使用体验。
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="section">
+            <h2 class="section-title">常见问题</h2>
+            <div class="step">
+                <div class="step-content">
+                    <h3 class="step-title">Q: 绑定设备失败怎么办？</h3>
+                    <p class="step-desc">A: 请检查网络连接，确认账号状态正常。如仍无法解决，请尝试重新登录或联系客服。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-content">
+                    <h3 class="step-title">Q: 空间管理支持哪些文件类型？</h3>
+                    <p class="step-desc">A: 支持所有常见文件类型，包括文档、图片、音频、视频、压缩包等。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-content">
+                    <h3 class="step-title">Q: 如何更改存储位置？</h3>
+                    <p class="step-desc">A: 进入「设置」-「存储设置」，可随时更改默认存储位置。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部导航 -->
+    <div class="bottom-nav">
+        <a href="index.html" class="back-home">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            返回首页
+        </a>
+    </div>
+</body>
+</html>
